@@ -1,0 +1,305 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  clip-path: ellipse(45% 90% at 50% 12px);
+  z-index: 1;
+}
+
+#home:hover {
+  animation: rebote 0.5s ease infinite;
+}
+
+@keyframes rebote {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  background: #353535;
+}
+
+#links a{
+  background-color: #f1d9ad;
+  border: 1px white solid;
+  border-radius: 20px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  margin-inline: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+#links a:hover {
+  background-color: #ddd;
+}
+
+#background {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/background-1024.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+#cropDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title {
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header a:hover {
+  color: aqua;
+}
+
+.box-icons {
+  color: white;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  margin-inline: 30px;
+  padding-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.texto {
+  margin-inline: 10%;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+#inventario {
+  margin-inline: 10%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iframe {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#indice {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-right: 40px;
+}
+
+#indice img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+@media (max-width: 400px) {
+  
+  #indice p {
+    font-size: 1rem;
+  }
+
+  #indice img {
+    width: 250px;
+    height: 250px;
+  }
+  }
+
+#indice a{
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#indice a:hover {
+  color: aqua;
+}
+
+#bibliografia {
+  list-style-type: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#bibliografia a {
+  color: white;
+  text-decoration: none;
+}
+
+#bibliografia a:hover {
+  text-decoration: underline;
+  color: aqua;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  font-size: 1rem;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  clip-path: ellipse(40% 90% at 50% 100%);
+  z-index: 1;
+}
+
+#enlaces {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+#enlaces a {
+  text-decoration: overline;
+  color: #6b6ca0;
+}
+
+#hora {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: center;
+}
+
+#hora #hora_input {
+  margin-top: -10px;
+  font-size: 30px;
+}
+
+
+@media (max-width: 950px) {
+
+  #links {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #links a {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #content {
+    margin-block: 40px;
+  }
+
+  #inventario {
+    font-size: 15px;
+    flex-direction: column;
+  }
+
+  .texto {
+    font-size: 15px;
+    margin-block: 50px;
+  }
+
+  iframe { 
+    width: max-content;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  
+}
+
+#image-carousel {
+  text-align: center;
+  width: 90%;
+  margin-inline: -140px;
+}
+
+.splide__track {
+  clip-path: polygon(50% 0%, 65% 10%, 75% 50%, 60% 100%, 40% 100%, 25% 50%, 35% 10%);
+}
+
+@keyframes cloudMove {
+  0% {transform: translate(-32px,32px)}
+  100% {transform: translate(96px,32px)}
+}
+
+@keyframes cloudAppear {
+  0% {opacity: 0}
+  33.333333% {opacity: 1}
+  66.666667% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.cloud {
+  animation: cloudMove 5s linear infinite, cloudAppear 5s linear infinite;
+}
+
+.cloud:nth-child(5) {
+  animation-delay: 0s;
+}
+
+.cloud:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.cloud:nth-child(3) {
+  animation-delay: 0.75s;
+}
+
+.cloud:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.cloud:nth-child(1) {
+  animation-delay: 1.5s;
+}
+
+.card {
+  border: black 3px solid;
+  border-radius: 15px;
+  background-color: #333;
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+
+.card:hover {
+  background-color: rgb(57, 57, 95);
+}
